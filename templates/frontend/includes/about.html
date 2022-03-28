@@ -1,0 +1,31 @@
+{% load static %}
+<section id="mu-about-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="mu-about-us-area">           
+            {% for about in abouts|slice:1 %}
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="mu-about-us-left">
+                  <!-- Start Title -->
+                  <div class="mu-title">
+                    <h2>About Us</h2>              
+                  </div>
+                  <!-- End Title -->
+                  <p>{{about.title}}</p>
+                  <p>{{about.description}}</p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="mu-about-us-right">                            
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/epLVAGhLPRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>             
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
